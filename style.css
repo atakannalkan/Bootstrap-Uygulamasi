@@ -1,0 +1,487 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.4s;
+    padding: 10px;
+}
+.contanier{
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5px;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;/*Üstte float'ı left olan yani normal akışın dışına çıkan kutulardan etkilenmemesi için yazdım*/
+}
+nav{
+    width: 100%;
+    position: fixed;
+    background: #2C3E50;
+    padding-top: 25px;
+    padding-bottom :25px;
+    z-index: 1;/*Resmimin diğer özelliklerin üstüne geçmesini engelledim*/
+}
+.logo-box{
+    float: left;
+}
+.logo-box .logo-text{
+    color: #fff;
+    font-weight: 700;
+    font-size: 32px;
+}
+.nav-links .nav-icon{
+    display: none;
+}
+.nav-links .linkbtn{
+    font-weight: 700;
+}
+.nav-links{
+    width: auto;
+    position: relative;
+    float: right;
+    margin: -40px 20%;
+}
+.nav-links ul li{
+    padding: 5px 10px;
+    list-style: none;
+    float: left;
+}
+header{
+    background: #18bc9c;
+    width: 100%;
+    height: auto;
+    padding-top: 212px;
+    padding-bottom: 112px;
+    text-align: center;
+}
+header .contanier{
+    width: 100%;
+}
+header img{
+    max-width: 100%;
+    height: auto;
+}
+header h1{
+    color: white;
+    font-size: 70px;
+}
+header hr{
+    border-top: 3px solid white;/*hr etiketimin kalınlığını arttıramadığım için border arttırdım*/
+    margin: 10px auto;/*hr etiketimi sayfa içinde ortaladım*/
+    max-width: 250px;/*hr etiketimin en büyük yüksekliğini 250px yaptım*/
+}
+header i{
+    position: relative;
+    font-size: 35px;
+    color: white;
+    font-weight: 900;
+    top: -30px;
+    padding: 0 10px;
+    background: #18bc9c;
+}
+header > p{
+    font-size: 25px;
+    color: white;
+    padding-bottom: 100px;
+}
+.gallery-box{
+    width: 100%;
+    background: white;
+}
+.gallery-box h1{
+    padding-top: 100px;
+    font-size: 50px;
+    color: black;
+}
+.gallery-box hr{
+    border-top: 4px solid black;
+}
+.gallery-box > i{
+    color: black;
+    background: white;
+}
+.gallery{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.resim1{
+    width: 33%;
+    height: auto;
+    float: left;
+    padding: 0 5px;
+    position: relative;
+}
+.resim1 img{
+    width: 100%;
+    height: auto;
+}
+.effect{
+    position: absolute;
+    width: 98%;
+    height: 98%;
+    background-color: #18bc9c;
+    transition: 0.4s;
+    cursor: pointer;
+    opacity: 0;
+}
+.search{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    background: none;
+    transform: translate(-50%,-50%);
+    font-weight: 900;
+    font-size: 70px;
+    opacity: 0;
+    transition: 0.4s;
+}
+.about{
+    width: 100%;
+}
+.about h1{
+    font-size: 55px;
+}
+.about .about-text{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.about .left-text{
+    width: 50%;
+    height: auto;
+    padding-left: 200px;
+    font-size: 20px;
+    color: white;
+    float: left;
+}
+.about .right-text{
+    width: 50%;
+    height: auto;
+    padding-right: 230px;
+    font-size: 20px;
+    color: white;
+    float: left;
+}
+.about a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+.buton-box{
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+.about .download-icon{
+    position: relative;
+    background: none;
+    font-size: 30px;
+    top: 5px;
+    transition: 0.4s;
+}
+footer{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+footer h1{
+    margin-top: 100px;
+    font-size: 50px;
+}
+footer .cizgi{
+    width: 250px;
+    border-top: 5px solid black;
+    margin: 10px auto;
+}
+footer i{
+    position: relative;
+    font-size: 35px;
+    color: black;
+    font-weight: 900;
+    padding: 0 10px;
+    background: white;
+    top: -30px;
+}
+footer .hr{
+    width: 50%;
+    margin: 20px auto;
+    opacity: 0.3;
+}
+footer ::placeholder{
+    font-size: 24px;
+}
+footer input{
+    width: 50%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+}
+footer textarea{
+    width: 50%;
+    border: none;
+}
+footer a{
+    position: relative;
+    left: -22%;
+    text-decoration: none;
+    color: white;
+    background: #18bc9c;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+footer .media-box{
+    width: 100%;
+    height: auto;
+    background: #2C3E50;
+    position: relative;
+}
+footer .ul .li{
+    list-style: none;
+    display: inline-block;
+    margin: 20px 20px;
+}
+footer .media-li{
+    list-style: none;
+    float: left;
+    margin: 0 -5px;
+}
+footer .ul .second{
+    position: relative;
+    top: -50px;
+}
+.media-li i{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    background: none;
+    color: white;
+    font-weight: 400;
+    transition: 0.4s;
+}
+.media-li div{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+.media-box h1{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.media-box p{
+    color: white;
+}
+.media-li:hover div{
+    background: white;
+}
+.nav-links .linkbtn:hover{
+    color: #18bc9c;
+}
+.media-li:hover i{
+    color: black;
+}
+.about a:hover{
+    background: white;
+    color: black;
+}
+.about a:hover .download-icon{
+    color: black;
+}
+.resim1:hover .effect{
+    opacity: 0.8;
+}
+.resim1:hover .search{
+    top: 50%;
+    left: 50%;
+    opacity: 0.8;
+}
+footer a:hover{
+    background: #2C3E50;
+}
+@media screen and (max-width:1517px)
+{
+    body h1{
+        font-size: 50px;
+    }
+    .gallery-box h1{
+        font-size: 40px;
+    }
+    .about h1{
+        font-size: 40px;
+    }
+    body .hr2{
+        max-width: 200px;
+    }
+    .about .left-text{
+        font-size: 16px;
+    }
+    .about .right-text{
+        font-size: 16px;
+    }
+    footer ::placeholder{
+        font-size: 19px;
+    }
+    .about a{
+        font-size: 18px;
+        padding: 15px 8px;
+    }
+    .buton-box{
+        margin-top: 150px;
+    }
+    header p{
+        font-size: 18px;
+    }
+    .search{
+        font-size: 60px;
+    }
+    .gallery{
+        width: 1100px;
+    }
+}
+@media screen and (max-width:1200px)
+{
+    body h1{
+        font-size: 40px;
+    }
+    .gallery-box h1{
+        font-size: 30px;
+    }
+    .about h1{
+        font-size: 30px;
+    }
+    body .hr2{
+        max-width: 200px;
+    }
+    .about .left-text{
+        font-size: 15px;
+    }
+    .about .right-text{
+        font-size: 15px;
+    }
+    footer ::placeholder{
+        font-size: 19px;
+    }
+    .about a{
+        font-size: 18px;
+        padding: 15px 8px;
+    }
+    .buton-box{
+        margin-top: 150px;
+    }
+    header p{
+        font-size: 16px;
+    }
+    .media-box h1{
+        font-size: 20px;
+    }
+    .media-box p{
+        font-size: 15px;
+    }
+    .contanier{
+        width: 900px;
+    }
+    .search{
+        font-size: 50px;
+    }
+    .gallery{
+        width: 800px;
+        margin-bottom: 100px;
+    }
+    .resim1{
+        width: 50%;
+    }
+}
+@media screen and (max-width:1032px)
+{
+    /*.nav-links .nav-icon{
+        display: block;
+    }*/
+    body h1{
+        font-size: 30px;
+    }
+    .nav-links .nav-item{
+        font-size: 18px;
+    }
+    .about .left-text{
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 50px;
+        text-align: center;
+        padding: 0;
+    }
+    body .hr2{
+        max-width: 150px;
+    }
+    .cizgi{
+        max-width: 150px;
+    }
+    footer .ul .three{
+        margin-top: -70px;
+    }
+    .media-li div{
+        width: 45px;
+        height: 45px;
+        margin-left: 10px;
+    }
+    .media-li i{
+        font-size: 20px;
+    }
+    .about .right-text{
+        width: 100%;
+        font-size: 16px;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 50px;
+    }
+    .about h1{
+        font-size: 30px;
+    }
+    footer .ul .three{
+        margin-top: -50px;
+    }
+    .gallery{
+        width: 500px;
+        margin-bottom: 100px;
+    }
+    .resim1{
+        width: 100%;
+    }
+}
+@media screen and (max-width:530px)
+{
+    .gallery{
+        max-width: 100%;/*Buradaki ince detay telefondaki sitem iyice küçüldüğünde kutumu değil resmimi küçülmesi*/
+    }
+    .resim1{
+        max-width: 100%;
+    }
+}
